@@ -20,6 +20,6 @@ class MessagesController < ApplicationController
     private
     
     def message_params
-        params.permit(:user_id, :chatroom_id, :text)
+        params.permit(:user_id, :chatroom_id, :text, :emotion)
     end
 end

@@ -1,18 +1,19 @@
 class ChatroomsController < ApplicationController
     def index 
-        chatroom = Chatroom.all
+        chatrooms = Chatroom.all
 
-        render json: chatroom
+        render json: chatrooms, include:["messages"]
     end
 
     def show 
         chatroom = Chatroom.find(params[:id])
 
-        render json: chatroom
+        render json: chatroom, include:["messages"]
     end
     
     def create
         @chatroom = Chatroom.create(chatroom_params)
+
         render json: @chatroom
     end
 

@@ -34,29 +34,29 @@ User.create(name: "Noura", password: "123", username: "Noura", img_url: "http://
 User.create(name: "Joe K", password: "123", username: "NoWayJoeK", img_url: "http://www.google.com")
 User.create(name: "Sarah Thiery", password: "123", username: "saravthiery", img_url: "http://www.google.com")
 
-c1 = Chatroom.create(user_id: jon.id, contact_id: alex.id, name: alex.name )
-c2 = Chatroom.create(user_id: jon.id, contact_id: ben.id, name: ben.name )
-c4 = Chatroom.create(user_id: daniel.id, contact_id: jon.id, name: daniel.name)
-c5 = Chatroom.create(user_id: erwin.id, contact_id: jon.id, name: erwin.name)
+c1 = Chatroom.create(user_id: jon.id, contact_id: alex.id, name: alex.name, name2: jon.name )
+c2 = Chatroom.create(user_id: jon.id, contact_id: ben.id, name: ben.name, name2: jon.name )
+c4 = Chatroom.create(user_id: daniel.id, contact_id: jon.id, name: daniel.name, name2: jon.name)
+c5 = Chatroom.create(user_id: erwin.id, contact_id: jon.id, name: erwin.name, name2: jon.name)
 
-3.times do 
+1.times do 
     Message.create(user_id: jon.id, chatroom_id: c1.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+2.times do 
     Message.create(user_id: alex.id, chatroom_id: c1.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+1.times do 
     Message.create(user_id: jon.id, chatroom_id: c2.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+2.times do 
     Message.create(user_id: ben.id, chatroom_id: c2.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+2.times do 
     Message.create(user_id: daniel.id, chatroom_id: c4.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+1.times do 
     Message.create(user_id: jon.id, chatroom_id: c4.id, text: "Testing testing", emotion: "happy")
 end
-3.times do 
+2.times do 
     Message.create(user_id: jon.id, chatroom_id: c5.id, text: "Testing testing", emotion: "happy")
 end

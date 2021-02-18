@@ -4,6 +4,7 @@ class CreateChatrooms < ActiveRecord::Migration[6.1]
       t.integer :user_id
       t.integer :contact_id
       t.string :name
+      t.string :name2
 
       t.timestamps
     end

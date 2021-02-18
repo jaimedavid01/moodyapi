@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_204717) do
     t.integer "user_id"
     t.integer "contact_id"
     t.string "name"
+    t.string "name2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

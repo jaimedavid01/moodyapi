@@ -20,7 +20,7 @@ class ChatroomsController < ApplicationController
     private
 
     def chatroom_params
-        params.permit(:user_id, :contact_id, :name)
+        params.permit(:user_id, :contact_id, :name, :name2)
     end
 
 end
